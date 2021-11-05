@@ -63,6 +63,7 @@ function prizeTrackerToggle()
     {
         prizeTracker.style.width = "0";
         togglePrizeTrackerButton.style.left = "0"
+        prizeTrackerTextSpan.style.left = "45px"
     }
     else
     {
@@ -85,6 +86,7 @@ function cardViewerToggle()
     {
         cardViewer.style.width = "0";
         toggleCardViewerButton.style.right = "0"
+        cardViewTextSpan.style.right = "45px"
     }
     else
     {

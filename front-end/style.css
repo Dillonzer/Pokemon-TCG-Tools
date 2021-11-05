@@ -1,25 +1,23 @@
 .prizeBar {
-    height: 630px; 
+    height: 100%; 
     width: 0; 
     position: fixed; 
-    z-index: 1; 
-    top: 70px;
+    z-index: 1;
     left: 0;	
-    background: rgba(0, 0, 0, 0.30);
     overflow-x: hidden; 
     transition: 0.5s; 
+    background: rgba(0, 0, 0, 0.3);
     }
 
 .cardViewBar {
-    height: 630px; 
+    height: 100%; 
     width: 0; 
     position: fixed;
     z-index: 1;
     right: 0;
-    background: rgba(0, 0, 0, 0.30);
     overflow-x: hidden; 
-    top: 70px;
     transition: 0.5s; 
+    background: rgba(0, 0, 0, 0.3);
     }
 
 .deckViewBar {
@@ -32,22 +30,10 @@
     right: 0;
     padding-left: 30px;
     padding-bottom: 20px;
-    background: rgba(0, 0, 0, 0.30);
     overflow-x: hidden; 
     transition: 0.5s; 
+    background: rgba(0, 0, 0, 0.3);
     }
-
-.toggle {
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    background: none;
-    color: white;
-}
-
-.toggle:hover {
-    color: #F37521;
-}
 
 @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
@@ -56,14 +42,14 @@
 
 .prizeTrackerToggle {
     position: absolute;
-    top: 45%;
+    top: 47%;
     left: 5px;
     transition: 0.5s; 
 }
 
 .cardViewerToggle {
     position: absolute;
-    top: 45%;
+    top: 47%;
     right: 5px;
     transition: 0.5s; 
 }
@@ -71,7 +57,7 @@
 .deckViewerToggle {
     position: absolute;
     bottom: 5px;
-    left: 45%;
+    left: 47%;
     transition: 0.5s; 
 }
 

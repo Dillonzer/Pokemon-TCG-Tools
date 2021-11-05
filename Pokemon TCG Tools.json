@@ -47,6 +47,28 @@
       "orientation": "Portrait",
       "type": "video_overlay",
       "viewerType": "Broadcaster"
+    },
+    {
+      "channelId": "56083652",
+      "configurationAnchor": "video_overlay",
+      "displayChannelName": "Dillonzer",
+      "features": {
+        "isBitsEnabled": false,
+        "isChatEnabled": false,
+        "isSubscriptionStatusAvailable": false
+      },
+      "frameSize": {
+        "width": 1024,
+        "height": 576
+      },
+      "id": "3",
+      "isPopout": false,
+      "label": "smaller view",
+      "linked": false,
+      "linkedUserId": "",
+      "orientation": "Portrait",
+      "type": "video_overlay",
+      "viewerType": "Broadcaster"
     }
   ],
   "manifest": {
