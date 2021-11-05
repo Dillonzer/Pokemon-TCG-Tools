@@ -1,0 +1,51 @@
+Walkthrough:
+1. Navigate to https://dillonzer.github.io/Pokemon_Deck_Utils/prizetracker.html either through the Config area of the Extension or through your browser.
+
+On https://dillonzer.github.io/Pokemon_Deck_Utils/prizetracker.html
+1. Click on Login to Twitch
+2. Allow
+3. Paste in a Decklist to the textbox underneath "Please Post your Decklist Here:"
+> Here is a sample one: 
+##Pokémon - 17
+
+* 1 Oranguru SSH 148
+* 1 Swablu CPA 48
+* 1 Crobat V DAA 104
+* 1 Altaria EVS 106
+* 3 Lombre RCL 8
+* 4 Zacian V SSH 138
+* 3 Lotad EVS 32
+* 3 Ludicolo EVS 34
+
+##Trainer Cards - 31
+
+* 4 Quick Ball SSH 216
+* 2 Evolution Incense SSH 163
+* 3 Level Ball BST 129
+* 4 Professor's Research SHF 60
+* 3 Boss's Orders SHF 58
+* 3 Switch BLW 104
+* 4 Metal Saucer SSH 170
+* 1 Air Balloon SSH 156
+* 2 Bird Keeper DAA 159
+* 1 Scoop Up Net RCL 165
+* 2 Rare Candy DEX 100
+* 2 Raihan EVS 152
+
+##Energy - 12
+
+* 12 Metal Energy SMEnergy 8
+
+Total Cards - 60
+4. Click Submit Decklist (this pushes the decklist to your channel's extension).
+5. Choose your 6 prizes. Once you chose your last prize it will send them to your extension.
+6. As you left click the prizes you take during the game, it will update your extension showing those ones as opaque. 
+7. Once finished, click Return All Prizes. This will reset your prizes on the Web App and the Extension.
+
+The Twitch Extension:
+1. Click on the image of the 2 cards to show the Streamer's Prizes. Click again to minimize it. (Each open will refresh the data)
+2. Click on the image of the deckbox to show the Streamer's Decklist. Click again to minimize it. (Each open will refresh the data)
+
+
+Change Log:
+- Initial Launch

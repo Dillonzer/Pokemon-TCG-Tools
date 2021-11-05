@@ -9,18 +9,6 @@
     background: rgba(0, 0, 0, 0.4);
     }
 
-.cardViewBar {
-    height: 100%; 
-    width: 0; 
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    overflow-x: hidden; 
-    transition: 0.5s; 
-    background: rgba(0, 0, 0, 0.4);
-    overflow: auto;
-    }
-
 .deckViewBar {
     height: 100%; 
     width: 0; 
@@ -35,19 +23,13 @@
 
 .prizeTrackerToggle {
     position: absolute;
-    top: 30%;
-    transition: 0.5s; 
-}
-
-.cardViewerToggle {
-    position: absolute;
-    top: 60%;
+    top: 35%;
     transition: 0.5s; 
 }
 
 .deckViewerToggle {
     position: absolute;
-    top: 45%;
+    top: 55%;
     transition: 0.5s; 
 }
 
@@ -63,247 +45,11 @@
 	max-width: 100%;
 }
 
-.cardViewBar img {
-	max-width: 100%;
-}
-
 .prizeCard 
 {
     padding-left: 5px;
     border: none;
 }
-
-.tab {
-    overflow: hidden;
-    border: 2px solid #cd8f00;
-    background-color: #1e3781;
-    font-size: 100%;
-}
-  
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 100%;
-    color: #f2f2f2;
-    font-weight: bold;
-}
-
-
-.prompt:focus {
-  box-shadow: none!important;
-}
-
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-  outline: none !important;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #344780;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-    background-color: #06237a;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border-top: none;
-  animation: fadeEffect 1s; /* Fading effect takes 1 second */
-  padding-left: 39px;
-}
-
-.prompt {
-    width: 320px;
-    height: 30px;
-    font-size: 110%;
-    padding-left: 2px;
-    margin-bottom: 10px;
-    border-radius: 7px;
-    border:3px solid #cd8f00;
-    background-color: #344780;
-    color:#f2f2f2;
-    font-weight: bold;
-}
-
-.languageChoice {
-  width: 125px;
-  float: right;
-  margin-right: 10px;
-  height: 30px;
-  font-size: 110%;
-  padding-left: 5px;
-  margin-top: 8px;
-  border-radius: 7px;
-  border:3px solid #cd8f00;
-  background-color: #344780;
-  color:#f2f2f2;
-  font-weight: bold;
-}
-
-.cardSize {     
-    padding-left: 2px;
-    border: none;
-}
-
-.loadingImage {
-    padding-top: 5px;
-    text-align: center;
-    border: none;
-}
-
-.loadingText {
-  color: #f2f2f2;
-  background-color: #000000;
-  font-size: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-align: center;
-  bottom: 8px;
-  width: 100%;
-  font-size: 125%;
-}
-
-.loadingBottomText {
-  color: #f2f2f2;
-  background-color: #000000;
-  font-size: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-align: center;
-  bottom: 8px;
-  width: 100%;
-  font-size: 100%;
-}
-
-input[type=checkbox] {
-    transform: scale(1.5);
-}
-
-.topPrompt {
-    vertical-align: top;
-    font-size: 100%;
-    margin-bottom: 10px;
-    border-radius: 7px;
-    border:3px solid #cd8f00;
-    background-color: #344780;
-    color:#f2f2f2;
-    font-weight: bold;
-}
-
-.refreshDiv {
-  display: none;
-  padding: 6px 12px;
-  border-top: none;
-
-}
-
-.refreshButton { 
-  margin-left:39px;
-  font-size: 100%;
-  width: 80%;
-  height: 50px;
-  font-size: 100%;
-  margin-bottom: 10px;
-  border-radius: 7px;
-  border:3px solid #cd8f00;
-  background-color: #344780;
-  color:#f2f2f2;
-  font-weight: bold;
-}
-
-/* Go from zero to full opacity */
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-
-
-  /* Slideshow container */
-.slideshow-container {
-    max-width: 320px;
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-  }
-  
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    display: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* Position the "next button" to the right */
-  .prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: #1e3781;
-  }
-    
-  /* Fading animation */
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-
-  /* Caption text */
-.slideshowText {
-    color: #f2f2f2;
-    background-color: #000000;
-    font-size: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: center;
-    bottom: 8px;
-    width: 100%;
-    font-size: 125%;
-  }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
 
 .deckCard
 {
