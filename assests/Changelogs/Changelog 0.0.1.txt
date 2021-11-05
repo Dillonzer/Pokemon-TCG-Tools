@@ -5,7 +5,7 @@ On https://dillonzer.github.io/Pokemon_Deck_Utils/prizetracker.html
 1. Click on Login to Twitch
 2. Allow
 3. Paste in a Decklist to the textbox underneath "Please Post your Decklist Here:"
-> Here is a sample one: 
+Here is a sample decklist: 
 ##Pokémon - 17
 
 * 1 Oranguru SSH 148
@@ -38,7 +38,7 @@ On https://dillonzer.github.io/Pokemon_Deck_Utils/prizetracker.html
 
 Total Cards - 60
 4. Click Submit Decklist (this pushes the decklist to your channel's extension).
-5. Choose your 6 prizes. Once you chose your last prize it will send them to your extension.
+5. Choose your 6 prizes by clicking on the cards in the Deck View. Once you chose your last prize it will send them to your extension.
 6. As you left click the prizes you take during the game, it will update your extension showing those ones as opaque. 
 7. Once finished, click Return All Prizes. This will reset your prizes on the Web App and the Extension.
 
