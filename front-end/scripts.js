@@ -33,7 +33,6 @@ window.onload = function()
 {
     EventListeners()  
     this.SetupCardViewer(GetAllSets); 
-    this.CreateDecklistTable("")
 }
 
 function EventListeners()
@@ -67,6 +66,7 @@ function prizeTrackerToggle()
     }
     else
     {
+        GetPrizes()
         prizeTracker.style.width = "30%";
         togglePrizeTrackerButton.style.paddingLeft = "30%"
         deckViewer.style.height = "0";
@@ -111,6 +111,7 @@ function deckViewerToggle()
     }
     else
     {
+        CreateDecklistTable()
         deckViewer.style.height = "90%";
         toggleDeckViewerButton.style.paddingBottom = "52%"
         cardViewer.style.width = "0";
@@ -408,22 +409,116 @@ function showSlides(n) {
   document.getElementById("nextSlide").style.display = "block"
 }
 
-async function CreateDecklistTable(decklist)
+async function CreateDecklistTable()
 {
-    var decklistTable = document.getElementById('decklistTable');
-    let fullList = decklist.Cards;
-    //for(let i = 0; i < fullList.length; i++)
-    for(let i = 0; i < 60; i++)
-    {
-        //let card = fullList[i]
-        let cardDiv = document.createElement('div');
-        let cardImage = document.createElement('img');//CREATE CARD IMAGE
-        let cardAmountSpan = document.createElement('span');//CREATE CARD AMOUNT SPAN
-        cardImage.src = "images/cardBack.png";//card.ImageLink
-        cardImage.className = "deckCard"
-        cardAmountSpan.innerHTML = "1"
-        cardDiv.appendChild(cardImage);
-        cardDiv.appendChild(cardAmountSpan);
-        decklistTable.appendChild(cardDiv);
-    }
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+      
+      fetch(pokeurl+"/deckutils/twitchIntegration/decklist/"+channelId, requestOptions)
+        .then(response => {return response.json()})
+        .then(data => {
+            var raw = JSON.stringify({ "decklist": data["decklist"]})
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            var requestOptions2 = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            
+            fetch(pokeurl+"/deckutils/generateDecklist", requestOptions2)
+                .then(response => {return response.json()})
+                    .then(data => {
+                        var decklistTable = document.getElementById('decklistTable');    
+                        decklistTable.innerHTML="";
+                        let fullList = data["cards"];
+                        for(let i = 0; i < fullList.length; i++)
+                        {
+                            let card = fullList[i]
+                            let cardDiv = document.createElement('div');
+                            let cardImage = document.createElement('img');//CREATE CARD IMAGE
+                            let cardAmountSpan = document.createElement('span');//CREATE CARD AMOUNT SPAN
+                            cardImage.src = card.imageUrlHiRes
+                            cardImage.className = "deckCard"
+                            cardAmountSpan.innerHTML = card.deckCount
+                            cardDiv.appendChild(cardImage);
+                            cardDiv.appendChild(cardAmountSpan);
+                            decklistTable.appendChild(cardDiv);
+                        }
+                })
+            
+        })
+
+    
+}
+
+async function GetPrizes()
+{
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+      
+      fetch("https://ptcg-api.herokuapp.com/deckutils/twitchIntegration/prizes/56083652", requestOptions)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("prize1").src = data["prize1"]
+            document.getElementById("prize2").src = data["prize2"]
+            document.getElementById("prize3").src = data["prize3"]
+            document.getElementById("prize4").src = data["prize4"]
+            document.getElementById("prize5").src = data["prize5"]
+            document.getElementById("prize6").src = data["prize6"]
+
+            if(data["prize1Taken"])
+            {                
+                document.getElementById("prize1").style.opacity = "15%"
+            }
+            else
+            {
+                document.getElementById("prize1").style.opacity = "100%"
+            }
+            if(data["prize2Taken"])
+            {                
+                document.getElementById("prize2").style.opacity = "15%"
+            }
+            else
+            {
+                document.getElementById("prize2").style.opacity = "100%"
+            }
+            if(data["prize3Taken"])
+            {                
+                document.getElementById("prize3").style.opacity = "15%"
+            }
+            else
+            {
+                document.getElementById("prize3").style.opacity = "100%"
+            }
+            if(data["prize4Taken"])
+            {                
+                document.getElementById("prize4").style.opacity = "15%"
+            }
+            else
+            {
+                document.getElementById("prize4").style.opacity = "100%"
+            }
+            if(data["prize5Taken"])
+            {                
+                document.getElementById("prize5").style.opacity = "15%"
+            }
+            else
+            {
+                document.getElementById("prize5").style.opacity = "100%"
+            }
+            if(data["prize6Taken"])
+            {                
+                document.getElementById("prize6").style.opacity = "15%"
+            }
+            else
+            {
+                document.getElementById("prize6").style.opacity = "100%"
+            }
+        })
 }
