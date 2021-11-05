@@ -1,0 +1,81 @@
+.prizeBar {
+    height: 90%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: #111; 
+    opacity: 75%;
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+    }
+
+.cardViewBar {
+    height: 90%; 
+    width: 0; 
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111; 
+    opacity: 75%;
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+    }
+
+.deckViewBar {
+    height: 0; 
+    width: 100%; 
+    position: fixed; 
+    z-index: 1; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #111;
+    opacity: 75%;
+    overflow-x: hidden; 
+    transition: 0.5s; 
+    }
+
+.toggle {
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: white;
+}
+
+.toggle:hover {
+    color: #F37521;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+} 
+
+.prizeTrackerToggle {
+    position: absolute;
+    top: 45%;
+    left: 5px;
+    transition: 0.5s; 
+}
+
+.cardViewerToggle {
+    position: absolute;
+    top: 45%;
+    right: 5px;
+    transition: 0.5s; 
+}
+
+.deckViewerToggle {
+    position: absolute;
+    bottom: 5px;
+    left: 45%;
+    transition: 0.5s; 
+}
+
+
