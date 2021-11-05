@@ -11,13 +11,66 @@
         <a id="toggleCardViewer" class="toggle cardViewerToggle">Open Card Viewer</a>
         <a id="toggleDecklistViewer" class="toggle deckViewerToggle">View Decklist</a>
         <div id="prizeTracker" class="prizeBar">        
-
+            <table>
+                <tr>
+                    <td><img src="images/cardBack.png" class="prizeCard" id="prize1"></td>
+                    <td><img src="images/cardBack.png" class="prizeCard" id="prize2"></td>
+                </tr>
+                <tr>
+                    <td><img src="images/cardBack.png" class="prizeCard" id="prize3"></td>
+                    <td><img src="images/cardBack.png" class="prizeCard" id="prize4"></td>
+                </tr>
+                <tr>
+                    <td><img src="images/cardBack.png" class="prizeCard" id="prize5"></td>
+                    <td><img src="images/cardBack.png" class="prizeCard" id="prize6"></td>
+                </tr>
+            </table>
         </div> 
         <div id="cardViewer" class="cardViewBar">
-            
+            <div class="tab" id="tabHeader" style="display:none">
+                <button class="tablinks" id="btn_BySet">By Set</button>
+                <button class="tablinks" id="btn_ByCardName">By Card Name</button>
+                <select id="language" class="languageChoice">
+                    <option value="en_US" selected>English</option>
+                    <option value="de_DE">Deutsch</option>
+                    <option value="fr_FR">Français</option>
+                    <option value="es_ES">Español</option>
+                    <option value="it_IT">Italiano</option>
+                    <option value="pt_BR">Português</option>
+                </select>
+            </div>
+            <div class="loading" id="loadingImg">
+                <p class="loadingText" id="loadingTxt">Loading All Pokemon Cards...</p>
+                <p class="loadingImage">
+                    <img src="images/loadingGif.gif">
+                </p>  
+                <p class="loadingBottomText">Pokemon Card Viewer - Version 1.3</br> Created and Maintained by Dillonzer</p>      
+            </div>
+            <div class="refreshDiv" id="refreshSection">
+                <p class="loadingText">Oh no! Looks like there was an issue loading all cards. Please click the button below to try again!</p>
+                <button class="refreshButton" id="btn_refresh">Refresh</button>  
+            </div>
+            <div id="div_BySet" class="tabcontent">
+                <select id="setName" class="prompt" style="display:none">
+                    <option value="" disabled selected>Please select a Set</option>
+                </select>
+                <select id="cardName" class="prompt" style="display:none">
+                    <option value="" disabled selected>Please select a Card</option>
+                </select>
+                <img id="cardImage" class="cardSize" style="display:none">
+            </div>
+            <div id="div_ByCardName" class="tabcontent">
+                <input type="text" id="txt_cardName" class="topPrompt" style="float: left; width: 230px; padding-left: 5px;" placeholder="Card Name Here">
+                <button class="topPrompt" id="btn_searchCardByName" style="float: right; width: 80px">Search</button>  
+                </br>
+                <div class="slideshow-container" id="slideshow">
+                </div> 
+                <a class="prev" id="prevSlide">&#10094;</a>
+                <a class="next" id="nextSlide">&#10095;</a>
+            </div>    
         </div> 
         <div id="decklistViewer" class="deckViewBar">
-
+            <div id="decklistTable"></div>
         </div> 
     </div>  
 </body>
