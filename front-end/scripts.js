@@ -59,18 +59,18 @@ function prizeTrackerToggle()
     var deckViewer = document.getElementById("decklistViewer")
     var toggleDeckViewerButton = document.getElementById("toggleDecklistViewer")
 
-    if(prizeTracker.style.width == "30%")
+    if(prizeTracker.style.width == "310px")
     {
         prizeTracker.style.width = "0";
-        togglePrizeTrackerButton.style.paddingLeft = "0"
+        togglePrizeTrackerButton.style.left = "0"
     }
     else
     {
         GetPrizes()
-        prizeTracker.style.width = "30%";
-        togglePrizeTrackerButton.style.paddingLeft = "30%"
+        prizeTracker.style.width = "310px";
+        togglePrizeTrackerButton.style.left = "310px"
         deckViewer.style.height = "0";
-        toggleDeckViewerButton.style.paddingBottom = "0"
+        toggleDeckViewerButton.style.bottom = "0"
     }
 }
 
@@ -81,17 +81,17 @@ function cardViewerToggle()
     var deckViewer = document.getElementById("decklistViewer")
     var toggleDeckViewerButton = document.getElementById("toggleDecklistViewer")
 
-    if(cardViewer.style.width == "30%")
+    if(cardViewer.style.width == "400px")
     {
         cardViewer.style.width = "0";
-        toggleCardViewerButton.style.paddingRight = "0"
+        toggleCardViewerButton.style.right = "0"
     }
     else
     {
-        cardViewer.style.width = "30%";
-        toggleCardViewerButton.style.paddingRight = "30%"
+        cardViewer.style.width = "400px";
+        toggleCardViewerButton.style.right = "400px"
         deckViewer.style.height = "0";
-        toggleDeckViewerButton.style.paddingBottom = "0"
+        toggleDeckViewerButton.style.bottom = "0"
     }
 }
 
@@ -104,20 +104,20 @@ function deckViewerToggle()
     var deckViewer = document.getElementById("decklistViewer")
     var toggleDeckViewerButton = document.getElementById("toggleDecklistViewer")
 
-    if(deckViewer.style.height == "90%")
+    if(deckViewer.style.height == "80%")
     {
         deckViewer.style.height = "0";
-        toggleDeckViewerButton.style.paddingBottom = "0"
+        toggleDeckViewerButton.style.bottom = "0"
     }
     else
     {
         CreateDecklistTable()
-        deckViewer.style.height = "90%";
-        toggleDeckViewerButton.style.paddingBottom = "52%"
+        deckViewer.style.height = "80%";
+        toggleDeckViewerButton.style.bottom = "83%"
         cardViewer.style.width = "0";
-        toggleCardViewerButton.style.paddingRight = "0"
+        toggleCardViewerButton.style.right = "0"
         prizeTracker.style.width = "0";
-        togglePrizeTrackerButton.style.paddingLeft = "0"
+        togglePrizeTrackerButton.style.left = "0"
     }
 }
 
