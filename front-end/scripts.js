@@ -56,22 +56,25 @@ function prizeTrackerToggle()
 {
     var prizeTracker = document.getElementById("prizeTracker")
     var togglePrizeTrackerButton = document.getElementById("togglePrizeTacker")
+    var cardViewer = document.getElementById("cardViewer")
+    var toggleCardViewerButton = document.getElementById("toggleCardViewer")
     var deckViewer = document.getElementById("decklistViewer")
     var toggleDeckViewerButton = document.getElementById("toggleDecklistViewer")
 
-    if(prizeTracker.style.width == "310px")
+    if(prizeTracker.style.width == "30%")
     {
         prizeTracker.style.width = "0";
         togglePrizeTrackerButton.style.left = "0"
-        prizeTrackerTextSpan.style.left = "45px"
     }
     else
     {
         GetPrizes()
-        prizeTracker.style.width = "310px";
-        togglePrizeTrackerButton.style.left = "310px"
-        deckViewer.style.height = "0";
-        toggleDeckViewerButton.style.bottom = "0"
+        prizeTracker.style.width = "30%";
+        togglePrizeTrackerButton.style.left = "30%"
+        cardViewer.style.width = "0";
+        toggleCardViewerButton.style.left = "0"
+        deckViewer.style.width = "0";
+        toggleDeckViewerButton.style.left = "0"
     }
 }
 
@@ -79,21 +82,24 @@ function cardViewerToggle()
 {
     var cardViewer = document.getElementById("cardViewer")
     var toggleCardViewerButton = document.getElementById("toggleCardViewer")
+    var prizeTracker = document.getElementById("prizeTracker")
+    var togglePrizeTrackerButton = document.getElementById("togglePrizeTacker")
     var deckViewer = document.getElementById("decklistViewer")
     var toggleDeckViewerButton = document.getElementById("toggleDecklistViewer")
 
-    if(cardViewer.style.width == "400px")
+    if(cardViewer.style.width == "40%")
     {
         cardViewer.style.width = "0";
-        toggleCardViewerButton.style.right = "0"
-        cardViewTextSpan.style.right = "45px"
+        toggleCardViewerButton.style.left = "0"
     }
     else
     {
-        cardViewer.style.width = "400px";
-        toggleCardViewerButton.style.right = "400px"
-        deckViewer.style.height = "0";
-        toggleDeckViewerButton.style.bottom = "0"
+        cardViewer.style.width = "40%";
+        toggleCardViewerButton.style.left = "40%"
+        prizeTracker.style.width = "0";
+        togglePrizeTrackerButton.style.left = "0"
+        deckViewer.style.width = "0";
+        toggleDeckViewerButton.style.left = "0"
     }
 }
 
@@ -106,18 +112,18 @@ function deckViewerToggle()
     var deckViewer = document.getElementById("decklistViewer")
     var toggleDeckViewerButton = document.getElementById("toggleDecklistViewer")
 
-    if(deckViewer.style.height == "80%")
+    if(deckViewer.style.width == "90%")
     {
-        deckViewer.style.height = "0";
-        toggleDeckViewerButton.style.bottom = "0"
+        deckViewer.style.width = "0";
+        toggleDeckViewerButton.style.left = "0"
     }
     else
     {
         CreateDecklistTable()
-        deckViewer.style.height = "80%";
-        toggleDeckViewerButton.style.bottom = "83%"
+        deckViewer.style.width = "90%";
+        toggleDeckViewerButton.style.left = "90%"
         cardViewer.style.width = "0";
-        toggleCardViewerButton.style.right = "0"
+        toggleCardViewerButton.style.left = "0"
         prizeTracker.style.width = "0";
         togglePrizeTrackerButton.style.left = "0"
     }
@@ -464,7 +470,7 @@ async function GetPrizes()
         redirect: 'follow'
       };
       
-      fetch("https://ptcg-api.herokuapp.com/deckutils/twitchIntegration/prizes/56083652", requestOptions)
+      fetch(pokeurl+"/deckutils/twitchIntegration/prizes/"+channelId, requestOptions)
         .then(response => response.json())
         .then(data => {
             document.getElementById("prize1").src = data["prize1"]

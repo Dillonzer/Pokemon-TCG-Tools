@@ -3,10 +3,10 @@
     width: 0; 
     position: fixed; 
     z-index: 1;
-    left: 0;	
+    left: 0;
     overflow-x: hidden; 
     transition: 0.5s; 
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     }
 
 .cardViewBar {
@@ -14,58 +14,62 @@
     width: 0; 
     position: fixed;
     z-index: 1;
-    right: 0;
+    left: 0;
     overflow-x: hidden; 
     transition: 0.5s; 
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
+    overflow: auto;
     }
 
 .deckViewBar {
-    height: 0; 
-    width: 100%; 
+    height: 100%; 
+    width: 0; 
     position: fixed; 
     z-index: 1; 
-    bottom: 0;
     left: 0;
-    right: 0;
-    padding-left: 30px;
-    padding-bottom: 20px;
     overflow-x: hidden; 
     transition: 0.5s; 
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     }
 
-@media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-} 
 
 .prizeTrackerToggle {
     position: absolute;
-    top: 47%;
-    left: 5px;
+    top: 30%;
     transition: 0.5s; 
 }
 
 .cardViewerToggle {
     position: absolute;
-    top: 47%;
-    right: 5px;
+    top: 60%;
     transition: 0.5s; 
 }
 
 .deckViewerToggle {
     position: absolute;
-    bottom: 5px;
-    left: 47%;
+    top: 45%;
     transition: 0.5s; 
+}
+
+.prizeBar img {
+	max-width: 85%;
+}
+
+.deckViewBar img {
+	max-width: 100%;
+}
+
+.deckViewBar div {
+	max-width: 100%;
+}
+
+.cardViewBar img {
+	max-width: 100%;
 }
 
 .prizeCard 
 {
     padding-left: 5px;
-    width: 140px;
-    height: 200px;
     border: none;
 }
 
@@ -150,8 +154,6 @@ button:focus {
 
 .cardSize {     
     padding-left: 2px;
-    width: 320px;
-    height: 450px;
     border: none;
 }
 
@@ -305,14 +307,14 @@ input[type=checkbox] {
 
 .deckCard
 {
-    width: 140px;
-    height: 200px;
     border: none;
 }
 
 #decklistTable{
     align-content: flex-start;
     padding-top: 39px;
+    padding-left: 5px;
+    padding-bottom: 39px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -320,8 +322,8 @@ input[type=checkbox] {
 
 #decklistTable div {
     position: relative;
-    width: 140px;
-    height: 200px;
+    width: 13%;
+    height: 18%;
     margin: 1px;
 }
 
