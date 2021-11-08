@@ -43,7 +43,7 @@ Total Cards - 60
 7. Once finished, click Return All Prizes. This will reset your prizes on the Web App and the Extension.
 
 The Twitch Extension:
-1. Click on the image of the 2 cards to show the Streamer's Prizes. Click again to minimize it. (Each open will refresh the data)
+1. Click on the image of the 6 cards to show the Streamer's Prizes. Click again to minimize it. (Each open will refresh the data)
 2. Click on the image of the deckbox to show the Streamer's Decklist. Click again to minimize it. (Each open will refresh the data)
 
 
