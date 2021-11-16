@@ -79,11 +79,15 @@
     "canInstall": true,
     "configUrl": "https://localhost:8080/config.html",
     "configurationLocation": "none",
-    "description": "This overlay allows you to show your prizes and your decklist to your viewers (by setting them via a website). It even has a built in Card Viewer for users to look up cards!",
+    "description": "This overlay allows you to share your prizes and decklist with the viewers in real time! It is powered by a well-known prize tracker in the Community that I also maintain. All the instructions are in the config of this Extension, but if you have any questions feel free to reach out to me.",
     "eulaTosUrl": "",
     "hasChatSupport": false,
-    "iconUrl": "",
-    "iconUrls": {},
+    "iconUrl": "https://extensions-discovery-images.twitch.tv/bf7z4pzhly2scjpl4py0iwzk0g0tu3/0.0.1/logode4c762e-bad4-4449-8879-a7bcbd7cb84c",
+    "iconUrls": {
+      "100x100": "https://extensions-discovery-images.twitch.tv/bf7z4pzhly2scjpl4py0iwzk0g0tu3/0.0.1/logode4c762e-bad4-4449-8879-a7bcbd7cb84c",
+      "24x24": "https://extensions-discovery-images.twitch.tv/bf7z4pzhly2scjpl4py0iwzk0g0tu3/0.0.1/taskbar301de797-8f20-48cb-a65d-1b502a40c39d",
+      "300x200": "https://extensions-discovery-images.twitch.tv/bf7z4pzhly2scjpl4py0iwzk0g0tu3/0.0.1/discovery800bcb46-281d-4c35-a094-ade07f475602"
+    },
     "id": "bf7z4pzhly2scjpl4py0iwzk0g0tu3",
     "installationCount": -42,
     "liveConfigUrl": "",
@@ -92,15 +96,20 @@
     "privacyPolicyUrl": "",
     "requestIdentityLink": false,
     "requiredBroadcasterAbilities": [],
-    "screenshotUrls": [],
+    "screenshotUrls": [
+      "https://extensions-discovery-images.twitch.tv/bf7z4pzhly2scjpl4py0iwzk0g0tu3/0.0.1/screenshot22b490cc-c9f7-4a49-9106-ea8f92d6b5ab",
+      "https://extensions-discovery-images.twitch.tv/bf7z4pzhly2scjpl4py0iwzk0g0tu3/0.0.1/screenshot66e0f347-bb9d-478b-98bd-fa182d241099",
+      "https://extensions-discovery-images.twitch.tv/bf7z4pzhly2scjpl4py0iwzk0g0tu3/0.0.1/screenshot987cc7aa-c70b-460a-877e-31d75708f2bc",
+      "https://extensions-discovery-images.twitch.tv/bf7z4pzhly2scjpl4py0iwzk0g0tu3/0.0.1/screenshotc3b47387-fde6-4bc2-8eee-e6cc629de607"
+    ],
     "sku": "",
     "state": "Testing",
     "subscriptionsSupportLevel": "none",
     "summary": "Integrate many useful Pokemon TCG tools in one overlay!",
     "supportEmail": "dillonzerapps@gmail.com",
     "vendorCode": "",
-    "version": "0.0.1",
-    "viewerSummary": "Hover over the specific icons to view Prizes, Decklist, or even a Card Search module!",
+    "version": "0.0.2",
+    "viewerSummary": "Hover over the specific icons to view the streamers Prizes and Decklist!",
     "viewerUrl": "",
     "viewerUrls": {
       "videoOverlay": "https://localhost:8080/video_overlay.html"

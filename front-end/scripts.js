@@ -1,4 +1,5 @@
 const pokeurl = "https://ptcg-api.herokuapp.com"
+let decklistObject;
 
 window.Twitch.ext.onAuthorized((auth) => {
     token = auth.token;
@@ -15,6 +16,7 @@ function EventListeners()
 { 
     document.getElementById("togglePrizeTacker").addEventListener("click",function() {prizeTrackerToggle()})
     document.getElementById("toggleDecklistViewer").addEventListener("click",function() {deckViewerToggle()})
+    document.getElementById("showDeck").addEventListener("click",function() {ReturnToDeck()})
 }
 
 function prizeTrackerToggle() 
@@ -71,6 +73,8 @@ async function CreateDecklistTable()
       fetch(pokeurl+"/deckutils/twitchIntegration/decklist/"+channelId, requestOptions)
         .then(response => {return response.json()})
         .then(data => {
+            decklistObject = data["decklist"]
+            document.getElementById("decklistText").innerHTML = decklistObject;
             var raw = JSON.stringify({ "decklist": data["decklist"]})
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -99,6 +103,17 @@ async function CreateDecklistTable()
                             cardDiv.appendChild(cardImage);
                             cardDiv.appendChild(cardAmountSpan);
                             decklistTable.appendChild(cardDiv);
+
+                            if(i == fullList.length - 1)
+                            {
+                                let cardDiv = document.createElement('div');
+                                let exportDecklist = document.createElement('button');
+                                exportDecklist.innerHTML = "Show Decklist"
+                                exportDecklist.className = "exportButton"
+                                cardDiv.appendChild(exportDecklist);                                
+                                exportDecklist.addEventListener("click",function() {ShowDecklist()})
+                                decklistTable.appendChild(cardDiv);
+                            }
                         }
                 })
             
@@ -173,4 +188,16 @@ async function GetPrizes()
                 document.getElementById("prize6").style.opacity = "100%"
             }
         })
+}
+
+function ShowDecklist()
+{   
+    document.getElementById('decklistTable').style.display = "none"   
+    document.getElementById("decklistTextArea").style.display = "block"
+}
+
+function ReturnToDeck()
+{   
+    document.getElementById('decklistTable').style.display = "flex"   
+    document.getElementById("decklistTextArea").style.display = "none"
 }
