@@ -77,7 +77,7 @@
     "authorName": "Dillonzer",
     "bitsEnabled": false,
     "canInstall": true,
-    "configUrl": "https://bf7z4pzhly2scjpl4py0iwzk0g0tu3.ext-twitch.tv/bf7z4pzhly2scjpl4py0iwzk0g0tu3/0.0.3/ddb306a5af2714ff2d2aeaeb7e02b47b/config.html",
+    "configUrl": "https://localhost:8080/config.html",
     "configurationLocation": "none",
     "description": "This overlay allows you to share your prizes and decklist with the viewers in real time! It is powered by a well-known prize tracker in the Community that I also maintain. All the instructions are in the config of this Extension, but if you have any questions feel free to reach out to me.",
     "eulaTosUrl": "",
@@ -104,24 +104,24 @@
       "https://extensions-discovery-images.twitch.tv/bf7z4pzhly2scjpl4py0iwzk0g0tu3/0.0.2/screenshotfea660e4-6e4c-4daa-bc9c-9587b4d5cc6e"
     ],
     "sku": "",
-    "state": "In Review",
+    "state": "Testing",
     "subscriptionsSupportLevel": "none",
     "summary": "Integrate many useful Pokemon TCG tools in one overlay!",
     "supportEmail": "dillonzerapps@gmail.com",
     "vendorCode": "",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "viewerSummary": "Hover over the specific icons to view the streamers Prizes and Decklist!",
     "viewerUrl": "",
     "viewerUrls": {
-      "videoOverlay": "https://bf7z4pzhly2scjpl4py0iwzk0g0tu3.ext-twitch.tv/bf7z4pzhly2scjpl4py0iwzk0g0tu3/0.0.3/ddb306a5af2714ff2d2aeaeb7e02b47b/video_overlay.html"
+      "videoOverlay": "https://localhost:8080/video_overlay.html"
     },
     "views": {
       "videoOverlay": {
-        "viewerUrl": "https://bf7z4pzhly2scjpl4py0iwzk0g0tu3.ext-twitch.tv/bf7z4pzhly2scjpl4py0iwzk0g0tu3/0.0.3/ddb306a5af2714ff2d2aeaeb7e02b47b/video_overlay.html",
+        "viewerUrl": "https://localhost:8080/video_overlay.html",
         "canLinkExternalContent": false
       },
       "config": {
-        "viewerUrl": "https://bf7z4pzhly2scjpl4py0iwzk0g0tu3.ext-twitch.tv/bf7z4pzhly2scjpl4py0iwzk0g0tu3/0.0.3/ddb306a5af2714ff2d2aeaeb7e02b47b/config.html",
+        "viewerUrl": "https://localhost:8080/config.html",
         "canLinkExternalContent": false
       }
     },

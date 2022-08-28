@@ -1,4 +1,4 @@
-const pokeurl = "https://ptcg-api.herokuapp.com"
+const pokeurl = "https://pkmntcgapi-production.up.railway.app"
 let decklistObject;
 
 window.Twitch.ext.onAuthorized((auth) => {
