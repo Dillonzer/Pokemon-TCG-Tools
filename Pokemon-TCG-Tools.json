@@ -7,9 +7,8 @@
     {
       "channelId": "56083652",
       "configurationAnchor": "video_overlay",
-      "displayChannelName": "Dillonzer",
+      "displayChannelName": "dillonzer",
       "features": {
-        "isBitsEnabled": false,
         "isChatEnabled": false,
         "isSubscriptionStatusAvailable": false
       },
@@ -25,57 +24,14 @@
       "orientation": "Portrait",
       "type": "video_overlay",
       "viewerType": "Broadcaster"
-    },
-    {
-      "channelId": "56083652",
-      "configurationAnchor": "video_overlay",
-      "displayChannelName": "Dillonzer",
-      "features": {
-        "isBitsEnabled": false,
-        "isChatEnabled": false,
-        "isSubscriptionStatusAvailable": false
-      },
-      "frameSize": {
-        "width": 1600,
-        "height": 900
-      },
-      "id": "2",
-      "isPopout": false,
-      "label": "bigger view",
-      "linked": false,
-      "linkedUserId": "",
-      "orientation": "Portrait",
-      "type": "video_overlay",
-      "viewerType": "Broadcaster"
-    },
-    {
-      "channelId": "56083652",
-      "configurationAnchor": "video_overlay",
-      "displayChannelName": "Dillonzer",
-      "features": {
-        "isBitsEnabled": false,
-        "isChatEnabled": false,
-        "isSubscriptionStatusAvailable": false
-      },
-      "frameSize": {
-        "width": 1024,
-        "height": 576
-      },
-      "id": "3",
-      "isPopout": false,
-      "label": "smaller view",
-      "linked": false,
-      "linkedUserId": "",
-      "orientation": "Portrait",
-      "type": "video_overlay",
-      "viewerType": "Broadcaster"
     }
   ],
+  "frontendCommand": "",
+  "frontendFolderName": "front-end",
   "manifest": {
-    "anchor": "video_overlay",
-    "assetUrls": [],
+    "anchor": "",
+    "assetURLs": [],
     "authorName": "Dillonzer",
-    "bitsEnabled": false,
     "canInstall": true,
     "configUrl": "https://localhost:8080/config.html",
     "configurationLocation": "none",
@@ -109,28 +65,39 @@
     "summary": "Integrate many useful Pokemon TCG tools in one overlay!",
     "supportEmail": "dillonzerapps@gmail.com",
     "vendorCode": "",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "viewerSummary": "Hover over the specific icons to view the streamers Prizes and Decklist!",
-    "viewerUrl": "",
+    "viewerUrl": null,
     "viewerUrls": {
-      "videoOverlay": "https://localhost:8080/video_overlay.html"
+      "mobile": "",
+      "panel": "",
+      "videoOverlay": "https://localhost:8080/video_overlay.html",
+      "component": "",
+      "config": "https://localhost:8080/config.html",
+      "liveConfig": ""
     },
     "views": {
+      "mobile": null,
+      "panel": null,
       "videoOverlay": {
+        "viewer_url": "https://localhost:8080/video_overlay.html",
+        "can_link_external_content": false,
         "viewerUrl": "https://localhost:8080/video_overlay.html",
         "canLinkExternalContent": false
       },
+      "component": null,
       "config": {
+        "viewer_url": "https://localhost:8080/config.html",
+        "can_link_external_content": false,
         "viewerUrl": "https://localhost:8080/config.html",
         "canLinkExternalContent": false
-      }
+      },
+      "liveConfig": null
     },
     "whitelistedConfigUrls": [],
     "whitelistedPanelUrls": []
   },
-  "frontendCommand": "",
-  "frontendFolderName": "front-end",
-  "name": "Pokemon TCG Tools",
-  "usingRandomFrontendHostingPort": false,
-  "version": 3
+  "name": "Pokemon-TCG-Tools",
+  "version": 3,
+  "usingRandomFrontendHostingPort": true
 }

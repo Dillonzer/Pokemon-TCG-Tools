@@ -17,49 +17,41 @@ function EventListeners()
     document.getElementById("togglePrizeTacker").addEventListener("click",function() {prizeTrackerToggle()})
     document.getElementById("toggleDecklistViewer").addEventListener("click",function() {deckViewerToggle()})
     document.getElementById("showDeck").addEventListener("click",function() {ReturnToDeck()})
+    document.getElementById("closeDecklist").addEventListener("click",function() {deckViewerToggle()})
+    document.getElementById("closePrizes").addEventListener("click",function() {prizeTrackerToggle()})
 }
 
 function prizeTrackerToggle() 
 {
     var prizeTracker = document.getElementById("prizeTracker")
-    var togglePrizeTrackerButton = document.getElementById("togglePrizeTacker")
     var deckViewer = document.getElementById("decklistViewer")
-    var toggleDeckViewerButton = document.getElementById("toggleDecklistViewer")
 
-    if(prizeTracker.style.width == "30%")
+    if(prizeTracker.style.height == "90%")
     {
-        prizeTracker.style.width = "0";
-        togglePrizeTrackerButton.style.left = "0"
+        prizeTracker.style.height = "0";
     }
     else
     {
         GetPrizes()
-        prizeTracker.style.width = "30%";
-        togglePrizeTrackerButton.style.left = "30%"
-        deckViewer.style.width = "0";
-        toggleDeckViewerButton.style.left = "0"
+        prizeTracker.style.height = "90%";
+        deckViewer.style.height = "0";
     }
 }
 
 function deckViewerToggle() 
 {
     var prizeTracker = document.getElementById("prizeTracker")
-    var togglePrizeTrackerButton = document.getElementById("togglePrizeTacker")
     var deckViewer = document.getElementById("decklistViewer")
-    var toggleDeckViewerButton = document.getElementById("toggleDecklistViewer")
 
-    if(deckViewer.style.width == "90%")
+    if(deckViewer.style.height == "90%")
     {
-        deckViewer.style.width = "0";
-        toggleDeckViewerButton.style.left = "0"
+        deckViewer.style.height = "0";
     }
     else
     {
         CreateDecklistTable()
-        deckViewer.style.width = "90%";
-        toggleDeckViewerButton.style.left = "90%"
-        prizeTracker.style.width = "0";
-        togglePrizeTrackerButton.style.left = "0"
+        deckViewer.style.height = "90%";
+        prizeTracker.style.height = "0";
     }
 }
 

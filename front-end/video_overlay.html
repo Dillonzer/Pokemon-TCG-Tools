@@ -6,28 +6,34 @@
 </head>
 <body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; ">
     <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
-    <div id="mainoverlay">        
+    <div id="mainoverlay">  
         <img id="togglePrizeTacker" class="toggleImages prizeTrackerToggle" src="images/prizesButton.png"></img>
         <img id="toggleDecklistViewer" class="toggleImages deckViewerToggle" src="images/deckbox.png"></img>
         <div id="prizeTracker" class="prizeBar"> 
-            <table>
+            <div style="height: 5em;"></div>
+            <div id="closePrizeButtonDiv">
+                <button id="closePrizes">X</button>
+            </div>
+            <table style="border-spacing: 2px;">
                 <tr>
                     <td><img class="prizeCard" id="prize1"></td>
                     <td><img class="prizeCard" id="prize2"></td>
-                </tr>
-                <tr>
                     <td><img class="prizeCard" id="prize3"></td>
-                    <td><img class="prizeCard" id="prize4"></td>
                 </tr>
                 <tr>
+                    <td><img class="prizeCard" id="prize4"></td>
                     <td><img class="prizeCard" id="prize5"></td>
                     <td><img class="prizeCard" id="prize6"></td>
                 </tr>
             </table>
         </div>   
         <div id="decklistViewer" class="deckViewBar">
+            <div style="height: 5em;"></div>
+            <div id="closeDecklistButtonDiv">
+                <button id="closeDecklist">X</button>
+            </div>
             <div id="decklistTable"></div> 
-            <div id="decklistTextArea" style="display: none;">
+            <div id="decklistTextArea" style="display: none; width: 40%;">
                 <textarea readonly id="decklistText"></textarea>
                 <button id="showDeck">Show Deck</button>
             </div>

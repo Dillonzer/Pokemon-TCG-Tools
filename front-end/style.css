@@ -1,19 +1,28 @@
+body:hover .prizeTrackerToggle {
+    opacity: 100%;
+}
+
+body:hover .deckViewerToggle {
+    opacity: 100%;
+}
+
 .prizeBar {
-    padding-top: 1em;
-    height: 100%; 
-    width: 0; 
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 0; 
+    width: 50%; 
     position: fixed; 
     z-index: 1;
     left: 0;
     overflow-x: hidden; 
     transition: 0.5s; 
     background: rgba(0, 0, 0, 0.4);
+    overflow-y: hidden;
     }
 
 .deckViewBar {
-    padding-top: 2em;
-    height: 100%; 
-    width: 0; 
+    height: 0; 
+    width: 100%; 
     position: fixed; 
     z-index: 1; 
     left: 0;
@@ -25,18 +34,39 @@
 
 .prizeTrackerToggle {
     position: absolute;
-    top: 35%;
+    top: 70%;
+    left: 8%;
     transition: 0.5s; 
+    opacity: 0%;
 }
+
+.prizeTrackerToggle:hover 
+{    
+    animation: bounce2 2s ease infinite;
+}
+
+.deckViewerToggle:hover 
+{    
+    animation: bounce2 2s ease infinite;
+}
+
+  @keyframes bounce2 {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-30px);}
+      60% {transform: translateY(-15px);}
+  }
 
 .deckViewerToggle {
     position: absolute;
-    top: 55%;
+    top: 70%;
+    left: 80%;
     transition: 0.5s; 
+    opacity: 0%;
 }
 
 .prizeBar img {
-	max-width: 85%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .deckViewBar img {
@@ -141,3 +171,62 @@
 {
     height: 75%;
 }
+
+#closeDecklist 
+{
+    float: right;
+    text-align: center;
+    font-weight: bolder;
+    background-color: #283C7E;
+    color: white;
+    border-color: #CD8F00;
+    border-radius: 5px;
+    border-style: solid;
+    padding: 1%;
+    margin-right: 5em;
+}
+
+#closeDecklist:hover
+{
+    background-color: #4060ca;
+}
+
+#closePrizes 
+{
+    float: right;
+    text-align: center;
+    font-weight: bolder;
+    background-color: #283C7E;
+    color: white;
+    border-color: #CD8F00;
+    border-radius: 5px;
+    border-style: solid;
+    padding: 1%;
+    margin-left: 2em;
+    margin-right: 5em;
+}
+
+#closePrizes:hover
+{
+    background-color: #4060ca;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
